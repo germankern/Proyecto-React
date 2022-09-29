@@ -1,0 +1,10 @@
+.marca {
+    background-color: rgb(95, 0, 185);
+    color: rgb(247, 245, 249);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 12px;
+    font-size: 22px;
+    font-weight: 600;
+}
