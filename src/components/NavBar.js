@@ -6,20 +6,21 @@ import './navBar.css'
 const NavBar = () => {
   return (
     <nav className="nav-container">
+      <h1>ArgZapas</h1>
       <ul className="ul-nav">
         <li>
-          <a href="#">Mujer</a>
+          <a href="#">Inicio</a>
         </li>
         <li>
           <a href="#">Hombre</a>
         </li>
         <li>
-          <a href="#">Niños</a>
+          <a href="#">Mujer</a>
         </li>
         <li>
           <a href="#">Ofertas</a>
         </li>
-      <CartWidget className="carrito"/>
+      <CartWidget/>
       </ul>
     </nav>
     

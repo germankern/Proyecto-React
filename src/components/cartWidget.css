@@ -1,15 +1,22 @@
 .cont-img-carrito {
     display: flex;
     align-items: center;
-    border: 2px solid rgb(250, 250, 250);
-    box-shadow: rgba(250, 146, 250, 0.4) 5px 5px, rgba(250, 146, 250, 0.3) 10px 10px, rgba(250, 146, 250, 0.2) 15px 15px;
-    border-radius: 30%;
 }
+
+.span {
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+
 .img-carrito {
     display: flex;
     align-items: flex-end;
     width: 60px;
     padding: 8px;
     background-color: rgba(69, 80, 254, 0.7);
+    border: 2px solid rgb(250, 250, 250);
     border-radius: 25%;
+    box-shadow: rgba(250, 146, 250, 0.4) 4px 4px, rgba(250, 146, 250, 0.3) 7px 7px;
+
 }

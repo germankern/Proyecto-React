@@ -5,7 +5,9 @@ import './cartWidget.css'
 const CartWidget = () => {
   return (  
           <div className='cont-img-carrito'>   
-              <img className='img-carrito' src={Carrito}></img>
+              <span className='span'>0
+                <img className='img-carrito' src={Carrito}></img>
+              </span>
           </div>
   )
 }
