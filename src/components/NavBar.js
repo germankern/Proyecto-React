@@ -1,26 +1,31 @@
 // Escribir "rafce" (sniped ES7+React)
 
-import CartWidget from "./CartWidget"
-import './navBar.css'
+import CartWidget from "./CartWidget";
+import './navBar.css';
+import {Link, NavLink} from 'react-router-dom'
 
 const NavBar = () => {
   return (
     <nav className="nav-container">
-      <h1>ArgZapas</h1>
+      <Link to="/">
+        <h1>ArgZapas</h1>
+      </Link>
       <ul className="ul-nav">
         <li>
-          <a href="#">Inicio</a>
+          <NavLink to="/">Inicio</NavLink>
         </li>
         <li>
-          <a href="#">Hombre</a>
+          <NavLink to="/category/running">Running</NavLink>
         </li>
         <li>
-          <a href="#">Mujer</a>
+          <NavLink to="/category/tenis">Tenis</NavLink>
         </li>
         <li>
-          <a href="#">Ofertas</a>
+          <NavLink to="/category/botines">Botines</NavLink>
         </li>
-      <CartWidget/>
+      <Link to='/cart'>
+        <CartWidget/>
+      </Link>
       </ul>
     </nav>
     

@@ -1,0 +1,35 @@
+.container-products {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    height: 280px;
+    border: 2px solid black;
+    box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.7);
+    margin: 10px;
+    padding: 10px;
+}
+.img-products {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.price {
+    display: flex;
+    text-align: start;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: rgb(10, 103, 10);
+    padding: 2px;
+    background-color: rgba(95, 99, 99, 0.22);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.7);
+    border-radius: 10%;
+}
+.card-product {
+    color: rgba(3, 58, 154, 0.835);
+}
+.card-product h2 {
+    font-size: 20px;
+}

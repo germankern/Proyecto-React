@@ -1,0 +1,41 @@
+.container-count {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 100px;
+    background-color: rgba(192, 122, 37, 0.805);
+    box-shadow: 0px 3px 8px;
+}
+.count-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    margin-bottom: 4px;
+}
+.count-btn p {
+    color: rgb(11, 11, 229);
+    font-size: 20px;
+    font-weight: 800;
+
+}
+.btn {
+    cursor: pointer;
+    padding: 6px;
+    border: none;
+    border-radius: 10%;
+    min-width: 18px;
+    background-color: rgba(23, 22, 21, 0.8);
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+}
+.btn:hover {
+    background-color: rgba(11, 11, 229, 0.854);
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.806);
+    transition: 2000ms;
+}
+.btn:disabled {
+    background-color: rgba(11, 11, 229, 0.18);
+    box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.806);
+    cursor: no-drop;
+}
