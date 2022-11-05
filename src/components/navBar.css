@@ -1,6 +1,6 @@
 .nav-container {
     display: flex;
-    background-color: brown;
+    background-color: rgb(165, 42, 42);
 }
 h1 {
     display: flex;
@@ -11,7 +11,7 @@ h1 {
     padding: 10px;
     margin: 20px;
     border-radius: 20% 40% 20% 50%;
-    border: 1px solid rgba(228, 228, 224, 0.513);
+    border: 2px solid rgba(228, 228, 224, 0.513);
     box-shadow: 5px 2px 0px rgba(184, 180, 180, 0.638);
     font-size: 18px;
     font-family: sans-serif;
@@ -20,29 +20,27 @@ h1:hover {
     transition: 2000ms;
     background-color: rgb(247, 245, 249);
     color:  rgb(95, 0, 185);
-    border: 1px solid
+    border: 2px solid
 }
 .ul-nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     list-style: none;
-    padding: 8px;
+    padding: 9px;
     width: 100%;
 }
 
 .ul-nav li {
-    padding: 10px;
-    background-color: rgba(22, 151, 15, 0.716);
-    margin: 3px;
-    border: 1px solid black;
-    border-radius: 15%;
+    padding: 7px;
+    margin: 4px;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 15px;
 }
 
 li:hover {
-    background-color: rgba(130, 42, 42, 0.5);
     transition: 800ms;
-    border: 1px solid white;
+    background-color:  rgb(95, 0, 185);
 }
 
 a {
@@ -52,8 +50,16 @@ a {
     font-weight: 600;
 }
 
-a:hover {
-    transition: 600ms;
-    color: rgba(255, 255, 255, 0.70);
+.nav-link{
+    padding: 7px;
+    border: 3px solid white;
+    border-radius: 15px;
 }
-
+.nav-link:hover {
+    transition: 800ms;
+    background-color:  rgb(95, 0, 185);
+}
+.active {
+    text-decoration: underline;
+    background-color:  rgb(95, 0, 185);
+}

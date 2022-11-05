@@ -1,0 +1,95 @@
+.container-form {
+    background-color: rgba(102, 98, 98, 0.503);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 67vh;
+    color: rgb(95, 0, 185);
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0px 2px 4px 4px;
+}
+fieldset {
+    background-color: rgba(96, 0, 185, 0.87);
+    color: rgb(255, 255, 255);
+    padding: 6px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px 4px;
+    font-size: 18px;
+}
+.label-form {
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+.input-form {
+    padding: 6px;
+    min-width: 300px;
+    margin-bottom: 10px;
+}
+.btn-form {
+    padding: 4px;
+    margin-top: 10px;
+    min-width: 120px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    background-color: rgba(96, 0, 185, 0.87);
+    box-shadow: 0px 2px 4px 4px rgb(255, 255, 255);
+}
+.btn-form:hover {
+    background-color: rgba(22, 151, 15, 0.716);
+    transition: 600ms;
+}
+.container-order {
+    background-color: rgb(96, 0, 185);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 370px;
+    margin: 20vh auto;
+    padding: 16px;
+    border-radius: 10px;
+    border: 2px black;
+    box-shadow: 0px 4px 26px 6px;
+    text-align: center;
+}
+.order-h2 {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.order-h3 {
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.order-id {
+    color: red;
+    background-color: rgba(255, 255, 255, 0.711);
+    margin: 5px 0px;
+    padding: 2px;
+}
+.order-h4 {
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.order-h5 {
+    font-size: 15px;
+    font-weight: 700;
+    padding: 3px;
+    background-color: rgba(255, 255, 255, 0.902);
+    color: rgb(96, 0, 185);
+    border-radius: 5px;
+    border: 2px solid rgb(0, 0, 0);
+}
+.order-h5:hover {
+    transition: 700ms;
+    background-color: rgb(95, 0, 185);
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+}

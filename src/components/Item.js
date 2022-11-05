@@ -1,8 +1,9 @@
 import React from 'react'
 import './item.css'
 import { Link } from 'react-router-dom'
+
 const Item = ({prod}) => {
-    // Responsabilidad: renderizar productos en el DOM.
+  // Responsabilidad: renderizar productos en el DOM.
   return (
     <Link to={`/items/${prod.id}`}>
       <article className='container-products'>

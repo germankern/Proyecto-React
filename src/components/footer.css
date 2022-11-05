@@ -1,0 +1,22 @@
+.container-footer {
+    background-color: rgb(165, 42, 42);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.icon-footer {
+    width: 30px;
+    vertical-align: middle;
+    margin: 4px;
+    box-shadow: 0px 2px 4px 2px;
+    border-radius: 5px;
+}
+.container-links a {
+    margin: 0px 12px;
+    font-size: 16px;
+}
+.dev-h5 {
+    margin-top: 6px;
+}

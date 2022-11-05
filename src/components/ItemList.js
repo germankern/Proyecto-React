@@ -1,8 +1,8 @@
-import React from 'react'
+import {memo} from 'react'
 import Item from './Item';
 import './itemList.css'
 
-// Responsabilidad: mapear los productos.
+// Responsabilidad: mapear los productos. Luego renderiza un Item
 
 const ItemList = ({items}) => {
 
@@ -17,4 +17,4 @@ const ItemList = ({items}) => {
   )
 }
 
-export default ItemList
+export default memo(ItemList)

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './itemCount.css'
 
 const ItemCount = (props) => {
@@ -16,14 +16,30 @@ const ItemCount = (props) => {
         }
     };
 
+    const addCart = () =>{
+        props.setter(count);
+    }
+
     return (
-    <div className='container-count'>
-        <div className='count-btn'> 
-            <button className="btn" disabled={count === props.stock} onClick={sumar}>+</button>
-            <p>{count}</p>
-            <button className="btn" disabled={count === props.initial} onClick={restar}>-</button>
-        </div>
-        <button className='btn'>Agregar al carrito</button>
+    <div>
+        {props.stock === 0 ? <h5 className='sin-stock'>Agotado</h5>
+            :<div className='container-count'>
+                <div className='count-btn'> 
+                    <button className="btn" 
+                            disabled={count === props.initial} 
+                            onClick={restar}>-
+                    </button>
+                            <p>{count}</p>
+                    <button className="btn" 
+                            disabled={count === props.stock} 
+                            onClick={sumar}>+
+                    </button>
+                </div>
+                <p className='p-stock'>{props.stock} disponibles</p>
+                <button onClick={addCart} className='btn'>
+                    Agregar al carrito
+                </button>
+            </div>}
     </div>
     )
 };

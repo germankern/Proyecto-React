@@ -1,18 +1,19 @@
 .container-detail {
-    background-color: rgb(14, 152, 152);
+    background-color: rgba(14, 152, 152, 0.9);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    margin: 10px;
-    box-shadow: 0px 0px 10px 2px;
-    border: 3px solid rgba(0, 0, 0, 0.5);
+    margin: 15px;
+    box-shadow: 0px 2px 10px 2px;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
 }
 .container-detail img {
     width: 380px;
     flex-wrap: wrap;
-    padding: 5px;
+    padding: 25px;
 }
 .container-description {
     width: 50%;
@@ -20,4 +21,19 @@
     justify-content: center;
     align-items: center;
     font-size: 18px;
+    text-align: center;
+    color: rgba(208, 235, 235, 0.9);
+}
+.container-description-title {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+}
+.detail-price {
+    color: rgb(7, 90, 7);
+    background-color: rgb(190, 197, 202);
+    font-size: 18px;
+    padding: 2px;
+    margin-bottom: 3px;
+    box-shadow: 0px 3px 6px 1px rgba(0, 0, 0, 0.745);
+    border-radius: 10%;
 }

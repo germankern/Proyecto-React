@@ -8,7 +8,9 @@
     color: white;
     font-weight: 700;
 }
-
+.remove-span {
+    color: rgba(255, 255, 255, 0);
+}
 .img-carrito {
     display: flex;
     align-items: flex-end;
