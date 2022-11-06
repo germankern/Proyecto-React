@@ -36,6 +36,8 @@ Para correr el proyecto en su local ejecutar:
 ```
 npm start
 ```
+## Link del deployado en netlify
+https://argenzapascom.netlify.app/
 
 ## 📌 Contact me at:
 #### https://www.linkedin.com/in/germ%C3%A1n-kern-810830252/
