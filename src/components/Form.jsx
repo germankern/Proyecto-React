@@ -82,8 +82,7 @@ const Form = () => {
             }
 
         } else {
-            console.log('no hay stock del producto')
-            console.log(outStock)
+            console.log(`no hay stock del producto ${outStock}`)
         }
 
         } catch (error) {

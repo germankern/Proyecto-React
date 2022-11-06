@@ -42,4 +42,4 @@ npm start
 #### germankern890@gmail.com
 
 #### 🖥️⌨️ Proyecto realizado por Germán Kern
-### Gracias por pasarte 😃!! Recibo sugetencias y propuestas 
+### Gracias por pasarte 😃!! Recibo sugerencias y propuestas 
