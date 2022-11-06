@@ -14,7 +14,6 @@ const ItemDetailContainer = ({greeting}) => {
   const [loading, setLoading] = useState(true);
 
   const {id} = useParams();
-  // estado
 
   useEffect(()=>{
       const collectionProducts = collection(dataBase, 'products')
@@ -29,7 +28,7 @@ const ItemDetailContainer = ({greeting}) => {
           setLoading(false)
         })
         .catch((error) => {
-                console.log(error)
+            console.log(error)
         });
       return () => setLoading(true);
   }, [id]);
@@ -51,22 +50,3 @@ const ItemDetailContainer = ({greeting}) => {
 };
 
 export default ItemDetailContainer
-
-
-// const getProduct = () => {
-//   return new Promise ((res, rej) =>{
-//     const product = products.find((prod)=> prod.id === Number(id))
-//     setTimeout(() => {
-//       res(product);
-//     }, 1200)
-//   });
-// };
-// getProduct()
-//     .then((respuesta) => {
-//       setItem(respuesta)
-//       setLoading(false)
-//     })
-//     .catch((error) => {
-//       console.log(error)
-//     });
-// return () => setLoading(true);

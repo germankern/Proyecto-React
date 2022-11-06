@@ -7,6 +7,10 @@ const Item = ({prod}) => {
   return (
     <Link to={`/items/${prod.id}`}>
       <article className='container-products'>
+      {prod.stock === 0? 
+            <h6 className='agotado'>Agotado</h6> 
+            : <h6></h6>
+      }
           <img className='img-products'
               src={prod.img} 
               alt={prod.title} 

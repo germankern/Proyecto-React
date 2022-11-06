@@ -1,4 +1,6 @@
-import { addDoc, collection, serverTimestamp } from 'firebase/firestore';
+import { addDoc, collection, documentId, 
+        getDocs,query, serverTimestamp,
+        where, writeBatch } from 'firebase/firestore';
 import { useContext } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -18,31 +20,70 @@ const Form = () => {
     const [loading, setLoading] = useState(false);
 
     const { cart, totalPrice, deleteAll} = useContext(CartContext)
-// Como hacer que un estado en vez de ser un string sea un objeto y dentro de este objeto tener los 3 campos y
-// tener una sola funcion en vez de las 3 funciones. (Min: 57 CLASE 9)
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true)
+        
+        try {
+            const order = {
+                buyer: {name, phone, direction, email},
+                items: cart,
+                total: totalPrice(),
+                date: serverTimestamp(),
+            };
 
-        const order = {
-            buyer: {name, phone, direction, email},
-            items: cart,
-            total: totalPrice(),
-            date: serverTimestamp(),
+        const idsInCart = cart.map((prod) => prod.id)
+
+        const idsInFirestore = collection (dataBase, 'products')
+
+        const prodInFirestore = await getDocs (
+            query(idsInFirestore, where(documentId(), 'in', idsInCart))
+        );
+
+        const { docs } = prodInFirestore;
+
+        const batch = writeBatch(dataBase);
+
+        const outStock = [];
+
+        docs.forEach((doc) => {
+            const dataDoc = doc.data();
+            const stockDb = dataDoc.stock;
+
+            const prodAddToCart = cart.find((prod) => prod.id === doc.id)
+
+            const prodQuantity = prodAddToCart?.cantidad;
+
+            if (stockDb >= prodQuantity) {
+                batch.update(doc.ref, {stock: stockDb - prodQuantity})
+            } else {
+                outStock.push({id: doc.id, ...dataDoc})
+            }
+        })
+        
+        if (outStock.length === 0) {
+            batch.commit()
+            if (email === emailRepeat) {
+            const ordersRef = collection (dataBase, 'orders');
+            const ordersAdded = await addDoc(ordersRef, order);
+        
+            setOrderId(ordersAdded.id)
+            deleteAll()
+            } else {
+                alert('email no coincide')
+            }
+
+        } else {
+            console.log('no hay stock del producto')
+            console.log(outStock)
         }
 
-        const ordersCollection = collection(dataBase, 'orders')
-        addDoc(ordersCollection, order)
-            .then((res) => {
-                setOrderId(res.id)
-                deleteAll();
-                setLoading(false)
-            })
-            .catch((error) => {
-                console.log(error)
-            })
-        return () => setLoading(true);
+        } catch (error) {
+            console.log(error)
+        } finally {
+            setLoading(false)
+        }
     };
 
     const handleChangeName = (e) => {
@@ -84,8 +125,8 @@ const Form = () => {
             pattern= '[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?(( |\-)[a-zA-ZÀ-ÖØ-öø-ÿ]+\.?)*'
             minLength={8} 
             placeholder='Nombre y apellido' 
-            onChange={handleChangeName} //onChange va capturando lo que escribimos en el campo.
-            value={name}  // value ->Hay que darle de comer el mismo estado.Para que el input sepa lo que estas escribiendo en el campo.
+            onChange={handleChangeName} 
+            value={name} 
         /> 
         <label className='label-form' htmlFor="">* Numero de Celular</label>
         <input className='input-form' 

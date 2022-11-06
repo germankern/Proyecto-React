@@ -11,6 +11,10 @@
     margin: 25px 15px;
     padding: 10px;
 }
+.agotado {
+    color: rgba(255, 0, 0, 0.6);
+    font-weight: 700;
+}
 .img-products {
     width: 100%;
     height: auto;

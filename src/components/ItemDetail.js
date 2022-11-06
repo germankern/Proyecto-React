@@ -15,7 +15,6 @@ const ItemDetail = ({item}) => {
       addToCart(item, numero);
     }
 
-
   return (
     <div >
       {unidades === 0 ?

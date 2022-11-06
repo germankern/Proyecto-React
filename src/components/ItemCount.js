@@ -22,8 +22,10 @@ const ItemCount = (props) => {
 
     return (
     <div>
-        {props.stock === 0 ? <h5 className='sin-stock'>Agotado</h5>
-            :<div className='container-count'>
+        {props.stock === 0 ? 
+                        <h5 className='sin-stock'>Agotado</h5>
+            :
+            <div className='container-count'>
                 <div className='count-btn'> 
                     <button className="btn" 
                             disabled={count === props.initial} 
