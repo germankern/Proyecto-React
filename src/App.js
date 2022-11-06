@@ -9,7 +9,6 @@ import Footer from './components/Footer'
 import Provider from './context/CartContext';
 
 const App = () => {
-  
   return (
     <>
       <Provider>

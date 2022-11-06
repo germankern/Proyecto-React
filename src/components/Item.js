@@ -3,13 +3,17 @@ import './item.css'
 import { Link } from 'react-router-dom'
 
 const Item = ({prod}) => {
-  // Responsabilidad: renderizar productos en el DOM.
+
   return (
     <Link to={`/items/${prod.id}`}>
       <article className='container-products'>
       {prod.stock === 0? 
             <h6 className='agotado'>Agotado</h6> 
-            : <h6></h6>
+            : 
+          (prod.stock <= 6? 
+            <h6 className='agotado'>Pocas Unidades</h6>
+            :
+            <></>)
       }
           <img className='img-products'
               src={prod.img} 

@@ -1,5 +1,3 @@
-// Escribir "rafce" (sniped ES7+React)
-
 import CartWidget from "./CartWidget";
 import './navBar.css';
 import {Link, NavLink} from 'react-router-dom'
@@ -8,8 +6,8 @@ import { collection, getDocs } from "firebase/firestore";
 import { dataBase } from "../services/fireBaseConfig";
 import { useState } from "react";
 
-const NavBar = () => {
 
+const NavBar = () => {
   const [category, setCategory] = useState([]);
 
   useEffect(() => {
@@ -40,7 +38,11 @@ const NavBar = () => {
         </li>
         {category.map((cat) => {
           return (
-                <NavLink className='nav-link' key ={cat.id} to={`/category/${cat.path}`}>{cat.name}</NavLink>
+                <NavLink  className='nav-link' 
+                          key ={cat.id} 
+                          to={`/category/${cat.path}`}>
+                          {cat.name}
+                </NavLink>
               )
           })
         }
@@ -49,7 +51,6 @@ const NavBar = () => {
       </Link>
       </ul>
     </nav>
-    
   )
 }
 

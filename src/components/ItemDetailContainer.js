@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import ItemDetail from './ItemDetail'
-// import { products } from '../mockAPI/productsMock'
 import { useParams } from 'react-router-dom';
 import { HashLoader } from 'react-spinners';
 import { collection, getDoc, doc } from 'firebase/firestore';
 import { dataBase } from '../services/fireBaseConfig';
 
-// Responsabilidad: Traer nuestros productos a travéz de una promesa y guardarlos en el estado.
 
-const ItemDetailContainer = ({greeting}) => {
+const ItemDetailContainer = () => {
   const [item, setItem] = useState([]);
 
   const [loading, setLoading] = useState(true);
@@ -33,7 +31,6 @@ const ItemDetailContainer = ({greeting}) => {
       return () => setLoading(true);
   }, [id]);
 
-// Primero va a retornar y despues leer el useEffect
   return (
     <>
     <div>

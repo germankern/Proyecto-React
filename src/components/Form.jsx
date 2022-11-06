@@ -1,6 +1,13 @@
-import { addDoc, collection, documentId, 
-        getDocs,query, serverTimestamp,
-        where, writeBatch } from 'firebase/firestore';
+import { 
+    addDoc, 
+    collection, 
+    documentId, 
+    getDocs,
+    query, 
+    serverTimestamp,
+    where, 
+    writeBatch 
+} from 'firebase/firestore';
 import { useContext } from 'react';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -106,7 +113,9 @@ const Form = () => {
         return (
             <div className='container-order'>
                 <h2 className='order-h2'>Finalizaste tu compra {name}!</h2>
-                <h3 className='order-h3'>Tu número de seguimiento es: <p className='order-id'>{orderId}</p></h3>
+                <h3 className='order-h3'>Tu número de seguimiento es: 
+                        <p className='order-id'>{orderId}</p>
+                </h3>
                 <h4 className='order-h4'>- Recordá que los pedidos tardan un maximo de 48hs.</h4>
                 <Link to='/' className='order-h5'>Gracias por confiar en ArgenZapas.com</Link>
             </div>

@@ -25,7 +25,9 @@ const ItemDetail = ({item}) => {
             <p>{item.description}</p>
         </div>
         <h4 className='detail-price'>${item.price}</h4>
-          <ItemCount setter={setter} stock={item.stock} initial={1}/>
+          <ItemCount  setter={setter} 
+                      stock={item.stock} 
+                      initial={1}/>
         </div>
           :
         <Cart/>} 

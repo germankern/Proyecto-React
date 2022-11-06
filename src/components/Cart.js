@@ -6,22 +6,19 @@ import './cart.css'
 
 
 const Cart = () => {
-  
   const { cart, deleteAll, deleteItem, subtotal, totalPrice } = useContext(CartContext);
 
   if (cart.length === 0) {
-    return  <>
-              <ItemListContainer to='/' greeting={"ArgenZapas.com"}/>
-            </>
+    return <ItemListContainer to='/' greeting={"ArgenZapas.com"}/>
   }
   else {
   return (
     <div className='cart-container'>
         {cart.map((prod)=>(
-        // hacer un componente <CartDetail></CartDetail>
             <div className='cart-items' key={prod.id}>
-                <img className='cart-img' 
-                      src={prod.img} alt={prod.title} />
+                <img  className='cart-img' 
+                      src={prod.img} 
+                      alt={prod.title} />
                   <div className='cart-detail'>
                       <h3 className='cart-detail-title'>{prod.title}</h3>
                       <h4 className='cart-detail-price'>$ {prod.price}</h4>

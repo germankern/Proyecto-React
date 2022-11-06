@@ -6,7 +6,6 @@ import HashLoader from "react-spinners/HashLoader";
 import {collection, getDocs, query, where} from 'firebase/firestore';
 import {dataBase} from '../services/fireBaseConfig'
 
-// Responsabilidad: Traer nuestros productos a travéz de una promesa y guardarlos en el estado.
 
 const ItemListContainer = ({greeting}) => {
   const [items, setItems] = useState([]);
@@ -14,7 +13,7 @@ const ItemListContainer = ({greeting}) => {
   const [loading, setLoading] = useState(true);
 
   const {id} = useParams();
-// Le llega del {id} parametro y pinta la categoria.
+
   useEffect(()=>{
       const collectionProducts = collection(dataBase, 'products')
       
@@ -37,9 +36,8 @@ const ItemListContainer = ({greeting}) => {
         console.log(error)
       });
       return () => setLoading(true);
-  }, [id]); //el use efect esta atento al parametro ID, si cambia lo vuelve a renderizar.
+  }, [id]); 
 
-// Primero va a retornar y despues leer el useEffect
   return (
     <>
       <div className='marca'>
